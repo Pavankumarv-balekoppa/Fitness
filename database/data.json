@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "username": "dummy",
+      "password": "dummy@123",
+      "id": 1
+    },
+    {
+      "username": "gunda",
+      "email": "gunda@gmail",
+      "password": "gunda@123",
+      "age": "40",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "username": "abhi",
+      "email": "abhi@gmail",
+      "password": "abhi123",
+      "age": "30",
+      "gender": "male",
+      "id": 3
+    },
+    {
+      "username": "ramya",
+      "email": "ramya@gmail",
+      "password": "1234567890",
+      "age": "22",
+      "gender": "female",
+      "id": 4
+    },
+    {
+      "username": "pavankumar",
+      "email": "pavan@gmail.com",
+      "password": "pavan",
+      "age": "24",
+      "gender": "male",
+      "id": 5
+    }
+  ],
+  "trainers": [
+    {
+      "username": "dummy",
+      "password": "dummy@123",
+      "id": 1
+    },
+    {
+      "username": "pavankumar V",
+      "email": "pavan@gmail",
+      "password": "pavan",
+      "age": "24",
+      "gender": "male",
+      "id": 2
+    }
+  ],
+  "workouts": [
+    {
+      "workout": "dummy",
+      "calories": "100",
+      "id": 1
+    }
+  ]
+}
