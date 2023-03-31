@@ -1,22 +1,32 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     let [menu, setmenu] = useState(false)
+    let dispatch=useDispatch()
+    let {pathname : path}=useLocation()
+
     return (
         <nav className="home">
-            <div className="logo">
-                <h1>FitBit $H$</h1>
-            </div>
+            <Link to="/home">
+                <div className="logo">
+                    <h1>FitBit $H$</h1>
+                </div>
+            </Link>
             <div className="content">
+                {path=="/trainerdashboard" && <Link to="/workout">Workouts</Link>}
+
+                {path!="/trainerdashboard" &&
+                <>
                 <Link to="">Trainer</Link>
-                <Link to="">Workouts</Link>
+                <Link to="/workout">Workouts</Link>
                 <Link to="">My Workouts</Link>
-                <Link to="">BIM Calculater</Link>
-                <Link to="">Profile</Link>
+                <Link to="/bimcalculater">BIM Calculater</Link>
+                <Link to="">Profile</Link></> }
             </div>
             <div className="logout">
-                <button>Logout</button>
+                <button onClick={() => { dispatch({ type: "logout", payload: null })}}>Logout</button>
             </div>
             <div className="hamberger" onClick={() => { setmenu(!menu) }}>
                 {/* <i class="box box-menu"></i> */}
@@ -24,11 +34,11 @@ const Navbar = () => {
             </div>
             {menu && <div className="menu">
                 <Link to="">Trainer</Link>
-                <Link to="">Workouts</Link>
+                <Link to="/workout">Workouts</Link>
                 <Link to="">My Workouts</Link>
-                <Link to="">BIM Calculater</Link>
+                <Link to="/bimcalculater">BIM Calculater</Link>
                 <Link to="">Profile</Link>
-                <button>Logout</button>
+                <button onClick={() => { dispatch({ type: "logout", payload: null })}}>Logout</button>
             </div>}
         </nav>
     );

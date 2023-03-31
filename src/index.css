@@ -78,7 +78,7 @@ body{
 {
   color: rgba(0, 0, 0, 0.642);
   font-size: 20px;
-  background-color: transparent;
+  background-color: rgb(255, 255, 0);
   font-weight: 600;
   width: 200px;
   height: auto;
@@ -103,7 +103,7 @@ body{
   color: #373B61;
   font-weight: 900;
   text-decoration: none;  
-  background-color: #f8f8f5;
+  background-color: #f1f177;
   padding: 8px 15px;
   border-radius: 7px;
 }
@@ -116,6 +116,10 @@ body{
   padding: 20px 70px;
   align-items: center;
   background-color: #ffffff;
+}
+.home a{
+  text-decoration: none;
+  color: black;
 }
 .content a{
   text-decoration: none;
@@ -130,6 +134,7 @@ body{
 button{
   background-color: #F7DF1E;
   border: 2px solid black;
+  border-radius: 10px;
   padding: 8px 16px;
   font-weight:bold;
 }
@@ -185,7 +190,25 @@ button{
   border-radius: 8px;
 }
 
+/* workout page */
+.all-workouts{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.workout{
+  width: 300px;
+  background-color: #6f7399;
+  padding: 10px;
+}
+.workout img{
+  width: 250px;
+}
 
+
+/* media  */
 @media screen and (max-width:887px){
   .home{
     background-color:blue;

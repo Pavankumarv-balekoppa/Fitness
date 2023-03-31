@@ -34,7 +34,8 @@ const Login = ( {add_user} ) => {
            {
                 add_user(userdetails);
                 alert("login successfull");
-                navigate("/home");
+                // navigate("/home");
+                navigate(userkind==="user" ? "/home" : "/trainerdashboard");
            }
         }
         fetchCode();
